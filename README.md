@@ -1,4 +1,5 @@
 elua_bc417
 ==========
 
-eLua library to handle with bc417 bluetooth shield
+eLua Lua library to handle the BC417 bluetooth module
+
