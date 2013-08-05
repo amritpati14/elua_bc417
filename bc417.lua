@@ -47,22 +47,22 @@ function bc417_setup(uartid, baud)
     
     baud = uart.setup(uartid,  baud, 8, uart.PAR_NONE, uart.STOP_1)
     return baud
+end
 
-    end
+function bc417_set_pin(uartid, pin)
+  uart.write(uartid, "AT+PIN"..pin)
 end
 
 
-
-
-function bc417_set_pin()
+function bc417_set_baud(uartid, baud)
+  uart.write(uartid, "AT+BAUD"..baud)
 end
 
 
-function bc417_set_baud()
-end
-
-function bc417_set_name()
+function bc417_set_name(uartid, name)
+  uart.write(uartid, "AT+NAME"..name)
 end
 
 function bc417_listen()
+  return uart.read(uartid,'*s')
 end
