@@ -26,7 +26,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 module("bc417", package.seeall)
 
--- setup UART connection to bc415 module, must be called before any other funciontion related to the module
+-- setup UART connection to bc415 module, must be called before any other function related to the module
 function bc417_setup(uartid, baud)
   -- mbed has a special conf for pins
   if pb.board() == "MBED" then
